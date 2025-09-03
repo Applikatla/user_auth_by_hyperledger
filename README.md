@@ -61,7 +61,7 @@ export FABRIC_CFG_PATH=${PWD}/../config/
   -ccl javascript
 ```
 
-# Vwrify deployment (Set org1)
+### Verify deployment (Set org1)
 
 ```bash
 # Set Org1 peer CLI env
@@ -81,7 +81,7 @@ We will enroll the CA admin, then register and enroll a normal user user1.
 
 > All commands below are run from fabric-samples/test-network.
 
-# 3.1 Enroll CA Admin (Org1)
+### 3.1 Enroll CA Admin (Org1)
 
 ```bash
 # Point the CA client to Org1’s CA artifacts
@@ -98,7 +98,7 @@ This creates Org1 admin MSP under:
 organizations/peerOrganizations/org1.example.com/msp
 ```
 
-# 3.2) Register a New User (user1)
+### 3.2) Register a New User (user1)
 
 ```bash
 fabric-ca-client register \
@@ -111,7 +111,7 @@ fabric-ca-client register \
   --tls.certfiles ${PWD}/organizations/fabric-ca/org1/tls-cert.pem
 ```
 
-# 3.3) Enroll the User (user1)
+### 3.3) Enroll the User (user1)
 
 ```bash
 fabric-ca-client enroll \
@@ -132,14 +132,14 @@ organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/ms
 
 ## 4) Node.js App – Wallet, Gateway & Authentication
 
-# We’ll create a small Node.js app that:
+We’ll create a small Node.js app that:
 
 - loads user1 cert/key from MSP,
 - imports it into a FileSystem wallet,
 - connects to the gateway using user1,
 - proves authentication by reading/creating/querying assets.
 
-# 4.1) Create the App
+### 4.1) Create the App
 
 ```bash
 # still under fabric-samples/test-network
@@ -149,7 +149,7 @@ npm init -y
 npm install fabric-network
 ```
 
-# 4.2) app.js
+### 4.2) app.js
 
 ```js
 const { Gateway, Wallets } = require('fabric-network');
@@ -238,7 +238,7 @@ async function main() {
 main();
 ```
 
-# 4.3 Run
+### 4.3 Run
 
 ```bash
 node app.js
