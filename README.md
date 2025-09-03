@@ -122,13 +122,14 @@ fabric-ca-client enroll \
 ```
 
 This generates user1 credentials:
-
+```bash
 organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/
 ├─ cacerts/
 ├─ keystore/          # private key
 ├─ signcerts/         # x509 certificate
 ├─ IssuerPublicKey
 └─ IssuerRevocationPublicKey
+```
 
 ## 4) Node.js App – Wallet, Gateway & Authentication
 
