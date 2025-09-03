@@ -45,7 +45,7 @@ export FABRIC_CFG_PATH=${PWD}/../config/
 
 ```
 
-# You have noe
+# You have now
 
 - Orderer + Org1 + Org2 peers
 - Fabric CA for each org
