@@ -23,11 +23,13 @@ Tested with `fabric-samples/test-network`, Org1, channel `mychannel`, chaincode 
 curl -sSL https://bit.ly/2ysbOFE | bash -s
 cd fabric-samples
 
+```
+
 ## Setting up Hyperledger Fabric Test Network
 
 First, move into the `test-network` directory:
 
-```bash
+
 cd fabric-samples/test-network
 
 ## Make Fabric binaries available (peer, fabric-ca-client, etc.)
